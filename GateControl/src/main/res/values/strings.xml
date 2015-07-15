@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gate Control</string>
+    <string name="action_settings">Settings</string>
+    <string name="gate_switch_disabled">Unknown</string>
+    <string name="gate_switch_open">Open</string>
+    <string name="gate_switch_closed">Closed</string>
+    <string name="notification_title">Gate State</string>
+    <string name="unknown_state_error">Unknown state received!</string>
+    <string name="pref_url">Service URL</string>
+    <string name="pref_username">Username</string>
+    <string name="pref_password">Password</string>
+</resources>

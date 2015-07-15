@@ -1,0 +1,16 @@
+{
+  "name": "gate-control",
+  "version": "0.0.1",
+  "private": true,
+  "bin": {
+    "csvwriter": "./app.js"
+  },
+  "dependencies": {
+    "body-parser": "1.13.2",
+    "express": "4.4.4",
+    "node-gcm": "0.10.0",
+    "pi-gpio": "0.0.5",
+    "serve-static": "1.2.3",
+    "socket.io": "1.0.6"
+  }
+}

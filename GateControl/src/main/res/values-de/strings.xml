@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Torsteuerung</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="gate_switch_closed">Geschlossen</string>
+    <string name="gate_switch_disabled">Unbekannt</string>
+    <string name="gate_switch_open">Geöffnet</string>
+    <string name="notification_title">Torstatus</string>
+    <string name="unknown_state_error">Unbekannten Status empfangen!</string>
+    <string name="pref_password">Passwort</string>
+    <string name="pref_url">Service URL</string>
+    <string name="pref_username">Benutzername</string>
+</resources>

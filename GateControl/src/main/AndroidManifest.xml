@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.github.gazonkfoo.gatecontrol">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+
+    <permission android:name="com.github.gazonkfoo.gatecontrol.permission.C2D_MESSAGE"
+                android:protectionLevel="signature"/>
+    <uses-permission android:name="com.github.gazonkfoo.gatecontrol.permission.C2D_MESSAGE"/>
+
+    <application android:allowBackup="true"
+                 android:icon="@drawable/ic_lock_open"
+                 android:label="@string/app_name"
+                 android:theme="@style/Theme.AppCompat.Light">
+        <activity android:name=".MainActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".SettingsActivity"
+                  android:label="@string/action_settings">
+        </activity>
+
+        <receiver android:name="com.google.android.gms.gcm.GcmReceiver"
+                  android:exported="true"
+                  android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.github.gazonkfoo.gatecontrol"/>
+            </intent-filter>
+        </receiver>
+        <service android:name=".GCMListener"
+                 android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service android:name=".GCMInstanceIDListener"
+                 android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <service android:name=".GCMRegistration"
+                 android:exported="false">
+        </service>
+
+    </application>
+
+</manifest>
