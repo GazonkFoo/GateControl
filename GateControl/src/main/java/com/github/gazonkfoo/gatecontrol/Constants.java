@@ -18,7 +18,9 @@ package com.github.gazonkfoo.gatecontrol;
 
 public class Constants {
 
-    public static final String REGISTRATION_COMPLETE = "registrationComplete";
+    public static final String REGISTRATION_COMPLETE = "com.github.gazonkfoo.gatecontrol.REGISTRATION";
+    public static final String OPEN_GATE = "com.github.gazonkfoo.gatecontrol.OPEN";
+
     public static final String REGISTRATION_ERROR = "registrationError";
     public static final String MESSAGE_TIMESTAMP = "timestamp";
     public static final String GATE_STATE = "gateState";
@@ -26,4 +28,6 @@ public class Constants {
     public static final String PREF_URL = "pref_url";
     public static final String PREF_USERNAME = "pref_username";
     public static final String PREF_PASSWORD = "pref_password";
+    public static final String PREF_VIBRATE = "pref_vibrate";
+
 }

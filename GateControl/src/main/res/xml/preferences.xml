@@ -3,11 +3,15 @@
     <EditTextPreference
             android:key="pref_url"
             android:title="@string/pref_url"/>
-        <EditTextPreference
-                android:key="pref_username"
-                android:title="@string/pref_username"/>
-        <EditTextPreference
-                android:key="pref_password"
-                android:title="@string/pref_password"
-                android:inputType="textPassword"/>
+    <EditTextPreference
+            android:key="pref_username"
+            android:title="@string/pref_username"/>
+    <EditTextPreference
+            android:key="pref_password"
+            android:title="@string/pref_password"
+            android:inputType="textPassword"/>
+    <CheckBoxPreference
+            android:key="pref_vibrate"
+            android:title="@string/pref_vibrate"
+            android:defaultValue="true"/>
 </PreferenceScreen>

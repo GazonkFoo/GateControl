@@ -1,7 +1,6 @@
 package com.github.gazonkfoo.gatecontrol;
 
 import android.content.*;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
@@ -13,8 +12,6 @@ import android.view.View;
 import android.widget.*;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
-
-import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
@@ -40,16 +37,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
         gateButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                new AsyncTask<Void, Void, Void>() {
-                    protected Void doInBackground(Void... params) {
-                        try {
-                            new GateService(getPreferences()).buttonDown();
-                        } catch (IOException e) {
-                            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-                        }
-                        return null;
-                    }
-                }.execute();
+                sendBroadcast(new Intent(Constants.OPEN_GATE));
             }
         });
 

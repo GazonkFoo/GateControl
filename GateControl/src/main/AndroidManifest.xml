@@ -50,6 +50,13 @@
                  android:exported="false">
         </service>
 
+        <receiver android:name=".OpenGateReceiver"
+                  android:exported="false">
+            <intent-filter>
+                <action android:name="com.github.gazonkfoo.gatecontrol.OPEN"/>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

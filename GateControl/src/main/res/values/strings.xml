@@ -10,4 +10,6 @@
     <string name="pref_url">Service URL</string>
     <string name="pref_username">Username</string>
     <string name="pref_password">Password</string>
+    <string name="pref_vibrate">Vibrate</string>
+    <string name="close_gate">Close</string>
 </resources>
